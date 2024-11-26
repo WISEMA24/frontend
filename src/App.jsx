@@ -13,12 +13,23 @@ import {
   imagePlugin,
 } from "@mdxeditor/editor";
 import { useState } from "react";
+import Toolbar from "./Toolbar";
 
 function App() {
   const [markdown, setMarkdown] = useState("");
 
+  const savetoFile = () => {
+    const blob = new Blob([markdown], { type: "text/markdown" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "notiz.md";
+    link.click();
+    URL.revokeObjectURL(link.href);
+  };
+
   return (
-    <div class="editor_container">
+    <>
+      <Toolbar onSave={savetoFile} />
 
       <MDXEditor
         markdown={markdown}
@@ -41,8 +52,7 @@ function App() {
           headingsPlugin(),
         ]}
       />
-
-    </div>
+    </>
   );
 }
 
