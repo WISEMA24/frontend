@@ -18,27 +18,31 @@ function App() {
   const [markdown, setMarkdown] = useState("");
 
   return (
-    <MDXEditor
-      markdown={markdown}
-      onChange={setMarkdown}
-      plugins={[
-        toolbarPlugin({
-          toolbarContents: () => (
-            <>
-              <UndoRedo />
-              <BoldItalicUnderlineToggles />
-              <BlockTypeSelect />
-              <CodeToggle />
-              <CreateLink />
-              <InsertImage />
-              <UndoRedo />
-            </>
-          ),
-        }),
-        imagePlugin(),
-        headingsPlugin(),
-      ]}
-    />
+    <div class="editor_container">
+
+      <MDXEditor
+        markdown={markdown}
+        onChange={setMarkdown}
+        plugins={[
+          toolbarPlugin({
+            toolbarContents: () => (
+              <>
+                <UndoRedo />
+                <BoldItalicUnderlineToggles />
+                <BlockTypeSelect />
+                <CodeToggle />
+                <CreateLink />
+                <InsertImage />
+                <UndoRedo />
+              </>
+            ),
+          }),
+          imagePlugin(),
+          headingsPlugin(),
+        ]}
+      />
+
+    </div>
   );
 }
 
