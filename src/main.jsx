@@ -8,11 +8,11 @@ import MarkdownFeld from "./assets/MarkdownFeld.jsx"; // Stelle sicher, dass der
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <div className="app-container">  {/* Container für das Layout */}
+    <div className="app-container" style={{display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))'}}>  {/* Container für das Layout */}
       <Sidebar />
+      <MarkdownFeld />
       <div className="main-content">
         <Searchbar />
-        <MarkdownFeld />  {/* Dein Markdown-Feld */}
       </div>
     </div>
   </StrictMode>
