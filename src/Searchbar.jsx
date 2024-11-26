@@ -1,4 +1,4 @@
-import './App.css';
+import './Dashboard.css';
 import { useState } from 'react';
 
 import logo from './assets/Eischhoarnschen.png';

@@ -1,4 +1,3 @@
-import "./App.css";
 import "@mdxeditor/editor/style.css";
 import {
   BoldItalicUnderlineToggles,

@@ -9,7 +9,7 @@ function MarkdownFeld() {
     useEffect(() => {
         fetch('')  // Pfad zur Markdown-Datei
             .then(response => response.text())
-            .then(data => setMarkdownContent(data));
+            .then(data => setMarkdownContent(""));
     }, []);
 
     return (
