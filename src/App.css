@@ -41,6 +41,8 @@
   left: 0;
   top: 0;
 
+#root {
+  padding: 2rem;
 }
 
 .logo {
@@ -95,4 +97,22 @@
 .suchen-button:hover {
   background-color: #471dc5;
   color: #c1c1c1;
+}
+
+.editor_container {
+  display: flex; /* Flexbox aktivieren */
+  justify-content: center; /* Horizontal zentrieren */
+  align-items: center; /* Optional: Oben positionieren */
+  height: auto; /* Optional: Anpassung der Höhe */
+}
+
+.mdxeditor-root-contenteditable {
+  height: calc(100vh - 50px); /* Gesamthöhe des Viewports abzüglich der Toolbar */
+  padding: 20px;
+  box-sizing: border-box;
+  border: none; /* Entfernt Rahmen, falls nicht nötig */
+}
+
+.editor {
+  width: 100%;
 }
