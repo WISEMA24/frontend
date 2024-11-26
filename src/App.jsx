@@ -29,29 +29,31 @@ function App() {
 
   return (
     <>
-      <Toolbar onSave={savetoFile} />
-
-      <MDXEditor
-        markdown={markdown}
-        onChange={setMarkdown}
-        plugins={[
-          toolbarPlugin({
-            toolbarContents: () => (
-              <>
-                <UndoRedo />
-                <BoldItalicUnderlineToggles />
-                <BlockTypeSelect />
-                <CodeToggle />
-                <CreateLink />
-                <InsertImage />
-                <UndoRedo />
-              </>
-            ),
-          }),
-          imagePlugin(),
-          headingsPlugin(),
-        ]}
-      />
+      <div style={{width: "100%"}}>
+        <MDXEditor
+          markdown={markdown}
+          onChange={setMarkdown}
+          plugins={[
+            toolbarPlugin({
+              toolbarContents: () => (
+                <>
+                  <UndoRedo />
+                  <BoldItalicUnderlineToggles />
+                  <BlockTypeSelect />
+                  <CodeToggle />
+                  <CreateLink />
+                  <InsertImage />
+                  <UndoRedo />
+                  <div style={{ display: "flex", flexGrow: 1 }}></div>
+                  <Toolbar onSave={savetoFile} />
+                </>
+              ),
+            }),
+            imagePlugin(),
+            headingsPlugin(),
+          ]}
+        />
+      </div>
     </>
   );
 }

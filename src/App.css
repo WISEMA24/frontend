@@ -1,8 +1,5 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 .logo {
@@ -42,23 +39,19 @@
 }
 
 .editor_container {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%; /* Container erstreckt sich über die gesamte Breite */
   display: flex; /* Flexbox aktivieren */
   justify-content: center; /* Horizontal zentrieren */
-  align-items: start; /* Optional: Oben positionieren */
+  align-items: center; /* Optional: Oben positionieren */
   height: auto; /* Optional: Anpassung der Höhe */
 }
 
 .mdxeditor-root-contenteditable {
-  position: absolute;
-  top: 50px; /* Startet unter der Toolbar */
-  left: 0;
-  width: 100vw; /* Volle Breite des Viewports */
   height: calc(100vh - 50px); /* Gesamthöhe des Viewports abzüglich der Toolbar */
   padding: 20px;
   box-sizing: border-box;
   border: none; /* Entfernt Rahmen, falls nicht nötig */
+}
+
+.editor {
+  width: 100%;
 }

@@ -1,12 +1,10 @@
-import { FaSave } from 'react-icons/fa';
+import { FaSave } from "react-icons/fa";
 function Toolbar({ onSave }) {
-    return (
-        <div style={{ display: 'flex', gap: '10px', marginBottom: '10px', flexWrap: 'wrap' }}>
-            {/* Andere Buttons */}
-            <button onClick={onSave}><FaSave /> Speichern</button>
-        </div>
-    );
+  return (
+      <button style={{ display: "flex", flexDirection: "row", gap: "10px" }} onClick={onSave}>
+        <FaSave /> Speichern
+      </button>
+  );
 }
 
-
-export default Toolbar
+export default Toolbar;
