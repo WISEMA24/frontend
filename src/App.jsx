@@ -12,33 +12,52 @@ import {
   InsertImage,
 } from "@mdxeditor/editor";
 import { useState } from "react";
+import Toolbar from "./Toolbar";
 
 function App() {
   const [markdown, setMarkdown] = useState("");
 
-  return (
+  const savetoFile = () => {
+    const blob = new Blob([markdown], { type: 'text/markdown' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'notiz.md';
+    link.click();
+    URL.revokeObjectURL(link.href);
+  };
 
-    <MDXEditor
-      markdown={markdown}
-      onChange={setMarkdown}
-      plugins={[
-        toolbarPlugin({
-          toolbarContents: () => (
-            <>
-              <UndoRedo />
-              <BoldItalicUnderlineToggles />
-              <BlockTypeSelect/>
-              <CodeToggle/>
-              <CreateLink/>
-              <InsertImage/>
-              <UndoRedo/>
-            </>
-          ),
-        }),
-        headingsPlugin(),
-      ]}
-    />
+  return (
+    <>
+      <Toolbar
+        onSave={savetoFile}
+      />
+      <MDXEditor
+        markdown={markdown}
+        onChange={setMarkdown}
+        plugins={[
+          toolbarPlugin({
+            toolbarContents: () => (
+              <>
+                <UndoRedo />
+                <BoldItalicUnderlineToggles />
+                <BlockTypeSelect />
+                <CodeToggle />
+                <CreateLink />
+                <InsertImage />
+                <UndoRedo />
+              </>
+            ),
+          }),
+          headingsPlugin(),
+        ]}
+      />
+    </>
   );
 }
 
 export default App;
+
+
+
+
+
