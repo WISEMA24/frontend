@@ -10,6 +10,7 @@ import {
   CodeToggle,
   CreateLink,
   InsertImage,
+  imagePlugin,
 } from "@mdxeditor/editor";
 import { useState } from "react";
 
@@ -17,7 +18,6 @@ function App() {
   const [markdown, setMarkdown] = useState("");
 
   return (
-
     <MDXEditor
       markdown={markdown}
       onChange={setMarkdown}
@@ -27,14 +27,15 @@ function App() {
             <>
               <UndoRedo />
               <BoldItalicUnderlineToggles />
-              <BlockTypeSelect/>
-              <CodeToggle/>
-              <CreateLink/>
-              <InsertImage/>
-              <UndoRedo/>
+              <BlockTypeSelect />
+              <CodeToggle />
+              <CreateLink />
+              <InsertImage />
+              <UndoRedo />
             </>
           ),
         }),
+        imagePlugin(),
         headingsPlugin(),
       ]}
     />
