@@ -9,8 +9,8 @@ import {
   BlockTypeSelect,
   CodeToggle,
   CreateLink,
-  DiffSourceToggleWrapper,
   InsertImage,
+  imagePlugin,
 } from "@mdxeditor/editor";
 import { useState } from "react";
 
@@ -30,18 +30,18 @@ function App() {
                 <UndoRedo />
                 <BoldItalicUnderlineToggles />
                 <BlockTypeSelect />
-                <BoldItalicUnderlineToggles />
                 <CodeToggle />
                 <CreateLink />
-                <DiffSourceToggleWrapper />
                 <InsertImage />
                 <UndoRedo />
               </>
             ),
           }),
+          imagePlugin(),
           headingsPlugin(),
         ]}
       />
+
     </div>
   );
 }
