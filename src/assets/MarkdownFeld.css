@@ -1,0 +1,22 @@
+.markdown-container {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    top:12%;
+    border-radius: 8px;
+    margin-left: 20.5%;
+    height: 100%;
+    width: 76.5%;
+    position:fixed;
+    overflow-y: auto;  /* Damit der Inhalt scrollen kann */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+.right-container {
+    flex: 1;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    overflow-y: auto;
+}
+
+

@@ -1,4 +1,3 @@
-import "./App.css";
 import "@mdxeditor/editor/style.css";
 import {
   BoldItalicUnderlineToggles,
@@ -18,6 +17,7 @@ import Toolbar from "./Toolbar";
 function App() {
   const [markdown, setMarkdown] = useState("");
 
+
   const savetoFile = () => {
     const blob = new Blob([markdown], { type: "text/markdown" });
     const link = document.createElement("a");
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-      <div style={{width: "100%"}}>
+      <div style={{ width: "100%" }}>
         <MDXEditor
           markdown={markdown}
           onChange={setMarkdown}
