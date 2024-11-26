@@ -11,3 +11,10 @@
     overflow-wrap: break-word;
     background-color: #333;
 }
+
+.semester-header {
+    background-image:linear-gradient(#f101d6,#c408dd);
+    padding: 2%;
+    font-weight: bold; 
+    border-radius: 25px; 
+}

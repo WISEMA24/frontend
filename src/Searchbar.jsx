@@ -1,6 +1,8 @@
 import './App.css';
 import { useState } from 'react';
 
+import logo from './assets/Eischhoarnschen.png';
+
 function Searchbar() {
     const [searchInput, setSearchInput] = useState("");
 
@@ -28,7 +30,11 @@ function Searchbar() {
 
     return (
         <>
+       
             <div className="topnav">
+            
+                <img class ="logo"src={logo} alt="Logo" width ="75" height ="50" />
+               
                         <div className="suchDiv">
                             <input 
                                 className="search" 
@@ -39,10 +45,11 @@ function Searchbar() {
                             />
                             <button className="suchen-button" href="#suche" onClick={handleSearch}>Suchen</button>
                         </div>
-                <a href="#bearbeiten" onClick={handleBearbeiten}>Bearbeiten</a> 
+                
                 <b className="neueNotiz" onClick={handleNeueNotiz}>Neue Notiz</b>
-                <a href="#loeschen" onClick={handleLoeschen}>Löschen</a>
+               
             </div>
+            
         </>
     );
 }

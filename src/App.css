@@ -43,6 +43,12 @@
 
 }
 
+.logo {
+  position: absolute;
+  left: 0;
+  top: 15%;
+  margin-left: 8%;
+}
 
 .topnav a, .topnav b,.suchen-button {
   margin-top: 0.5%;
@@ -63,21 +69,27 @@
 
 
 .neueNotiz {
-  background-color: #bc1afc;
+  background-image:linear-gradient(#f101d6,#c408dd);
   color: rgb(255, 255, 255);
+}
+
+.neueNotiz:hover {
+  background-color: #471dc5;
+  color:#c1c1c1;
 }
 
 .suchDiv {
   display: flex;
   align-items: center;
   gap: 1%;
-  width: 50%;
+  width: 70%;
   position: relative;
 }
 
 .suchen-button {
-  background-color: #bc1afc;
+  background-image:linear-gradient(#f101d6,#c408dd);
   color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
 .suchen-button:hover {
